@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        var kg, metros, imc
+    
+        kg = parseFloat(prompt("Digite seu peso"));
+    
+        if(kg<3){
+        document.location.reload(true);
+        }
+        else if(kg>300){
+            document.location.reload(true);}
+        else{
+            metros = parseFloat(prompt("Digite sua altura")); 
+            if(metros<0.5){
+                document.location.reload(true);
+            }
+            else if(metros>2.70)
+            document.location.reload(true);
+    
+            else{
+                imc = kg/(metros*metros);
+                alert("Seu Imc e igual a: " + imc);
+            } 
+            
+        }
+           
+    
+    </script>
+</body>
+</html>
