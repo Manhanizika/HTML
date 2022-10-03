@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    <script>
+        var cidades = [""]
+        var cont = 0;
+
+        function Cadastrar() {
+            alert("Cidade foi cadastrada com sucesso")
+            let cid = document.getElementById("cidades").value;
+            cidades.push(cid)
+            document.getElementById("cidades").value = "";
+
+        }
+
+        function MostrarLista() {
+            var tabela = "<table><tr class='seila2'><td>Indice</td><td>Cidade</td></tr>";
+            for (i = 1; i < cidades.length; i++) {
+                tabela += "<tr class='seila'><td>" + i + "</td><td>" + cidades[i] + "</td><tr>";
+            }
+            document.getElementById("tabela").innerHTML = tabela;
+        }
+
+        window.onload = function () {
+            var btn1 = document.getElementById("btnCad");
+            var btn2 = document.getElementById("btnLista");
+            btn1.onclick = Cadastrar;
+            btn2.onclick = MostrarLista;
+        }
+    </script>
+    <style>
+        table {
+            color: #CCCCCC;
+            width: 250px;
+            height: 70px;
+        }
+
+        .seila {
+            font-size: 14px;
+            background-color: #000066;
+            color: #CCCCCC;
+            text-align: center;
+            border: 2px solid white;
+            border-color: 1px white;
+        }
+
+        .seila2 {
+            font-size: 15px;
+            font-weight: 700;
+            background-color: #000033;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exercicio 1 aula 7</h1>
+
+    <form action="" method="get">
+        Digite a Cidade:
+        <input type="text" name="Cidades" id="cidades" placeholder="Digite a cidade">
+        <br><br>
+        <input type="button" value="Cadastrar" id="btnCad">
+        <input type="button" value="Mostrar lista" id="btnLista">
+
+    </form>
+    <br>
+    <div id="tabela">
+        </table>
+</body>
+
+</html>
