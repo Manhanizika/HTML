@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex7.2</title>
+    <script>
+        colunas = [""]
+        linhas = [""]
+
+        window.onload = function () {
+            let colunas = prompt("Digite o número de colunas:", "")
+            let linhas = prompt("Digite o número de linhas:", "")
+            var k = 0
+            var result = "<table>";
+            for (var i = 1; i <= colunas; i++) {
+                result += "<tr>";
+                for (var j = 1; j <= linhas; j++) {
+
+                    if (j % 2 == 0) {
+                        result += "<td style='background-color: limegreen;'>" + i + "," + j + "</td>";
+                    } else {
+                        result += "<td style='background-color: yellow;'>" + i + "," + j + "</td>";
+                    }
+                }
+                result += "</tr>";
+            }
+
+
+            document.getElementById("tabela").innerHTML = result;
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="tabela">
+</body>
+
+</html>
